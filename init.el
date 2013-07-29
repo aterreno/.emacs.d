@@ -132,12 +132,12 @@
 ;; compile into repl when saved
 (add-hook 'after-save-hook 'compile-clj-when-save)
 
-(dolist (file '("jp-autocomplete.el"
-		"jp-ace-jump-mode.el"
-;;		"jp-erc.el"
-		"jp-multiple-cursors.el"
-		"jp-html"
-		"jp-lnf.el"))
+(dolist (file '("at-autocomplete.el"
+		"at-ace-jump-mode.el"
+;;		"at-erc.el"
+		"at-multiple-cursors.el"
+		"at-html"
+		"at-lnf.el"))
   (load (concat dotfiles-dir file)))
 
 
