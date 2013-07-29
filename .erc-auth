@@ -1,0 +1,1 @@
+;;(erc :server "10.100.15.215" :port 6667 :nick (getenv "USER"))
