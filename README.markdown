@@ -9,6 +9,6 @@ To get started with emacs
 ## Setup
 
 - `cd ~`
-- `git clone git@github.com:MailOnline/.emacs.d.git`
+- `git clone git@github.com:aterreno/.emacs.d.git`
 
 

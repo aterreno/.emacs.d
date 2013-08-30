@@ -153,3 +153,15 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(require 'requirejs-mode)
+(add-hook 'js2-mode-hook (lambda () (requirejs-mode)))
+(add-hook 'javascript-mode-hook (lambda () (requirejs-mode)))
+
+(require 'org-latex)
+(unless (boundp 'org-export-latex-classes)
+  (setq org-export-latex-classes nil))
+(add-to-list 'org-export-latex-classes
+             '("article"
+               "\\documentclass{article}"
+               ("\\section{%s}" . "\\section*{%s}")))
