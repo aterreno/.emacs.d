@@ -136,7 +136,6 @@
 
 (dolist (file '("at-autocomplete.el"
 		"at-ace-jump-mode.el"
-;;		"at-erc.el"
 		"at-multiple-cursors.el"
 		"at-html"
 		"at-lnf.el"))
@@ -165,3 +164,9 @@
              '("article"
                "\\documentclass{article}"
                ("\\section{%s}" . "\\section*{%s}")))
+
+(add-to-list 'load-path "/Users/toni/.emacs.d/nonelpa/emacs-nexus")
+(require 'nexus)
+(require 'ac-nexus)
+(add-hook 'clojure-mode-hook 'ac-source-lein-set-up)
+(setq mm-url-use-external t)
