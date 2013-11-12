@@ -167,3 +167,7 @@
 
 (add-hook 'clojure-mode-hook 'ac-source-lein-set-up)
 (setq mm-url-use-external t)
+
+(require 'rainbow-delimiters)
+(add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
