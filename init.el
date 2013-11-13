@@ -100,13 +100,6 @@
 (add-hook 'clojure-mode-hook 'idle-highlight-mode)
 (add-hook 'emacs-lisp-mode 'idle-highlight-mode)
 
-;; Paredit
-(require 'paredit)
-(add-hook 'lisp-mode-hook 'paredit-mode)
-(add-hook 'emacs-lisp-mode-hook 'paredit-mode)
-(add-hook 'clojure-mode-hook 'paredit-mode)
-(add-hook 'nrepl-mode-hook 'enable-paredit-mode)
-
 (setq nrepl-history-file "~/.emacs.d/nrepl-history")
 (setq nrepl-use-pretty-printing t)
 
@@ -180,3 +173,10 @@
 (add-hook 'prog-mode-hook
           '(lambda ()
              (yas-minor-mode)))
+
+;; Paredit
+(require 'paredit)
+(add-hook 'lisp-mode-hook 'paredit-mode)
+(add-hook 'emacs-lisp-mode-hook 'paredit-mode)
+(add-hook 'clojure-mode-hook 'paredit-mode)
+(add-hook 'nrepl-mode-hook 'enable-paredit-mode)
