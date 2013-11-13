@@ -30,7 +30,7 @@
 ;; Font size
 ;;(set-face-attribute 'default nil :height 200 :font "Anonymous Pro")
 ;; nice big font for the weak sighted, try it with color-theme-sanityinc-tomorrow-slate
-(set-face-attribute 'default nil :height 150)
+(set-face-attribute 'default nil :height 100)
 
 ;; Scrolling
 (setq scroll-step 1)

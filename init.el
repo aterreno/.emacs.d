@@ -138,6 +138,7 @@
 		"at-ace-jump-mode.el"
 		"at-multiple-cursors.el"
 		"at-html"
+    "at-clojure"
 		"at-lnf.el"))
   (load (concat dotfiles-dir file)))
 
@@ -174,3 +175,4 @@
 (load-theme 'cyberpunk t)
 
 (require 'insfactor)
+(setq ns-use-Native-fullscreen nil)
