@@ -176,3 +176,7 @@
 
 (require 'insfactor)
 (setq ns-use-Native-fullscreen nil)
+
+(add-hook 'prog-mode-hook
+          '(lambda ()
+             (yas-minor-mode)))
