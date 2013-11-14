@@ -10,27 +10,8 @@
 ;; Coloring
 (require 'color-theme)
 
-;; Zenburn
-;;(require 'zenburn-theme)
-;;(load-theme 'zenburn t)
-
-;; Solarized if you wish..
-;;(require 'color-theme-sanityinc-solarized)
-(color-theme-sanityinc-solarized-light)
-;;(color-theme-sanityinc-solarized-dark)
-
-;; a more greenish theme with good contrast
-;;(color-theme-sanityinc-tomorrow-slate)
-
-;; Currently I'm using Tomorrow (starker contrast)
-;;(require 'color-theme-sanityinc-tomorrow)
-;;(color-theme-sanityinc-tomorrow-night)
-;;(color-theme-sanityinc-tomorrow-bright)
-
-;; Font size
-;;(set-face-attribute 'default nil :height 200 :font "Anonymous Pro")
-;; nice big font for the weak sighted, try it with color-theme-sanityinc-tomorrow-slate
-(set-face-attribute 'default nil :height 100)
+;(set-face-attribute 'default nil :height 100)
+(set-face-attribute 'default nil :height 150 :font "Anonymous Pro")
 
 ;; Scrolling
 (setq scroll-step 1)
@@ -45,3 +26,5 @@
 
 ;; y/n hassle
 (fset 'yes-or-no-p 'y-or-n-p)
+
+(load-theme 'cyberpunk t)
