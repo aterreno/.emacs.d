@@ -12,3 +12,7 @@ To get started with emacs
 - `git clone git@github.com:aterreno/.emacs.d.git`
 
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/aterreno/.emacs.d/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
