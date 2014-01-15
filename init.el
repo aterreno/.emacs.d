@@ -104,19 +104,13 @@
 (put 'erase-buffer 'disabled nil)
 
 (setenv "CLJ_FE_ZK_ROOT" "clj-fe-toni")
+(setenv "CLJ_FE_ZK_CONN_STR" "10.251.76.40:2181,10.251.76.52:2181")
+
 (custom-set-faces)
 
 (require 'requirejs-mode)
 (add-hook 'js2-mode-hook (lambda () (requirejs-mode)))
 (add-hook 'javascript-mode-hook (lambda () (requirejs-mode)))
-
-(require 'org-latex)
-(unless (boundp 'org-export-latex-classes)
-  (setq org-export-latex-classes nil))
-(add-to-list 'org-export-latex-classes
-             '("article"
-               "\\documentclass{article}"
-               ("\\section{%s}" . "\\section*{%s}")))
 
 (add-hook 'clojure-mode-hook 'ac-source-lein-set-up)
 (setq mm-url-use-external t)
