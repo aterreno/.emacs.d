@@ -132,6 +132,12 @@
 (add-hook 'clojure-mode-hook 'paredit-mode)
 (add-hook 'nrepl-mode-hook 'enable-paredit-mode)
 
+(require 'clj-refactor)
+(add-hook 'clojure-mode-hook (lambda ()
+                               (clj-refactor-mode 1)
+                               ;; insert keybinding setup here
+                               ))
+
 ;; Scala times
 ;; load the ensime lisp code...
 (add-to-list 'load-path "~/.emacs.d/ensime_2.9.2-0.9.8.9/elisp")
