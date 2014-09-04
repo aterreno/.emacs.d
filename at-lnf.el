@@ -11,8 +11,8 @@
 (require 'color-theme)
 
 ;(set-face-attribute 'default nil :height 100)
-(set-face-attribute 'default nil :height 120 :font "Anonymous Pro")
-(set-face-attribute 'default nil :height 150 :font "Anonymous Pro")
+(set-face-attribute 'default nil :height 125 :font "Anonymous Pro")
+;(set-face-attribute 'default nil :height 150 :font "Anonymous Pro")
 
 ;; Scrolling
 (setq scroll-step 1)

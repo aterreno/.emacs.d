@@ -96,15 +96,13 @@
 		"at-multiple-cursors.el"
 		"at-html"
 		"at-clojure"
-		"at-lnf.el"))
+		"at-lnf.el"
+		"erlang.el"))
   (load (concat dotfiles-dir file)))
 
 
 (global-auto-revert-mode t)
 (put 'erase-buffer 'disabled nil)
-
-(setenv "CLJ_FE_ZK_ROOT" "clj-fe-toni")
-(setenv "CLJ_FE_ZK_CONN_STR" "10.251.76.40:2181,10.251.76.52:2181")
 
 (custom-set-faces)
 
@@ -147,3 +145,14 @@
 ;; scala-mode is started for a buffer. You may have to customize this step
 ;; if you're not using the standard scala mode.
 (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+
+
+(setq erlang-root-dir "/usr/local/Cellar/erlang/R16B03-1/")
+(setq exec-path (cons "/usr/local/Cellar/erlang/R16B03-1/bin" exec-path))
+
+(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+(setq nrepl-hide-special-buffers t)
+(setq cider-repl-tab-command 'indent-for-tab-command)
+(setq cider-repl-pop-to-buffer-on-connect nil)
+(add-hook 'cider-repl-mode-hook 'paredit-mode)
+(add-hook 'cider-repl-mode-hook 'rainbow-delimiters-mode)
