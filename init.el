@@ -75,6 +75,7 @@
 (autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
 (setq auto-mode-alist (cons '("\\.markdown" . markdown-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.md" . markdown-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.json$" . js-mode) auto-mode-alist))
 
 ;; Clojure mode for ClojureScript
 (add-to-list 'auto-mode-alist '("\.cljs$" . clojure-mode))
@@ -106,9 +107,19 @@
 
 (custom-set-faces)
 
-(require 'requirejs-mode)
-(add-hook 'js2-mode-hook (lambda () (requirejs-mode)))
-(add-hook 'javascript-mode-hook (lambda () (requirejs-mode)))
+(add-hook 'js-mode-hook 'js2-minor-mode)
+(add-hook 'js2-mode-hook 'ac-js2-mode)
+(setq js2-highlight-level 3)
+
+(require 'flycheck)
+(add-hook 'js-mode-hook
+          (lambda () (flycheck-mode t)))
+
+(add-hook 'js-mode-hook (lambda () (tern-mode t)))
+(eval-after-load 'tern
+   '(progn
+      (require 'tern-auto-complete)
+      (tern-ac-setup)))
 
 (add-hook 'clojure-mode-hook 'ac-source-lein-set-up)
 (setq mm-url-use-external t)
@@ -129,6 +140,10 @@
 (add-hook 'emacs-lisp-mode-hook 'paredit-mode)
 (add-hook 'clojure-mode-hook 'paredit-mode)
 (add-hook 'nrepl-mode-hook 'enable-paredit-mode)
+
+;(define-key js-mode-map "{" 'paredit-open-curly)
+;(define-key js-mode-map "}" 'paredit-close-curly-and-newline)
+
 
 (require 'clj-refactor)
 (add-hook 'clojure-mode-hook (lambda ()
